@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+
+int main() {
+    std::srand(std::time(nullptr)); 
+    std::vector<int> arr1(20);
+    std::vector<int> arr2(20);
+    std::vector<int> new_arr(20);
+
+    for (int i = 0; i < 20; ++i) {
+        arr1[i] = std::rand() % 61 - 30; 
+        arr2[i] = std::rand() % 61 - 30;
+    }
+
+    std::cout << "Pervii massiv";
+    for (int num : arr1) {
+        std::cout << " " << num;
+    }
+    std::cout << std::endl;
+
+    std::cout << "Vtoroi massiv";
+    for (int num : arr2) {
+        std::cout << " " << num;
+    }
+    std::cout << std::endl;
+
+    for (int i = 0; i < arr1.size(); ++i) {
+        if (arr1[1] > arr2[i]) {
+            new_arr[i] = arr1[i];
+        } else {
+            new_arr[i] = arr2[i];
+        }
+    }
+
+    std::cout << "nowii massiv:";
+    for (int num : new_arr) {
+        std::cout << " " << num;
+    }
+    std::cout << std::endl;
+
+    return 0;
+}

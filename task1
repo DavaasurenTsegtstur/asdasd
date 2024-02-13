@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    int e, f, g, h;
+    std::cout << "e: ";
+    std::cin >> e;
+    std::cout << "f: ";
+    std::cin >> f;
+    std::cout << "g: ";
+    std::cin >> g;
+    std::cout << "h: ";
+    std::cin >> h;
+
+    double a = std::sqrt(std::abs(e - std::pow(2.0 / f, 2))) + g;
+    double b = std::sin(e) + std::pow(std::cos(e), 2); 
+    double c = (22 * g) / (e * f - 2);
+
+    std::cout << "a = " << a << ", b = " << b << " c = " << c << std::endl;
+
+    return 0;
+}
